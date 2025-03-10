@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dynamic Portfolio Generator</title>
+  <link rel="stylesheet" href="2styles.css"/>
+</head>
+<body>
+  <div id="login-section">
+    <h2>Login</h2>
+    <input type="email" id="email" placeholder="Email" required />
+    <input type="password" id="password" placeholder="Password" required />
+    <button onclick="login()">Login</button>
+  </div>
+
+  <div id="portfolio-form" style="display:none;">
+    <h2>Personal Information</h2>
+    <input type="text" id="full-name" placeholder="Full Name" required />
+    <input type="text" id="job-title" placeholder="Job Title (e.g. Business Consultant)" required />
+    <input type="text" id="contact" placeholder="Contact (phone/email/address)" required />
+    <input type="file" id="photo" accept="image/png, image/jpeg" required />
+    <textarea id="bio" placeholder="Short Bio" required></textarea>
+
+    <h2>Skills</h2>
+    <input type="text" id="soft-skills" placeholder="Soft Skills" />
+    <input type="text" id="technical-skills" placeholder="Technical Skills" />
+
+    <h2>Academic Background (Optional)</h2>
+    <input type="text" id="institute" placeholder="Institute" />
+    <input type="text" id="degree" placeholder="Degree" />
+    <input type="text" id="year" placeholder="Year" />
+    <input type="text" id="grade" placeholder="Grade" />
+
+    <h2>Work Experience</h2>
+    <input type="text" id="company" placeholder="Company Name" />
+    <input type="text" id="duration" placeholder="Job Duration (e.g. 2020 – Present)" />
+    <textarea id="responsibilities" placeholder="Job Responsibilities"></textarea>
+
+    <h2>Projects/Publications (Optional)</h2>
+    <textarea id="projects" placeholder="Previous Projects or Publications"></textarea>
+
+    <button onclick="submitPortfolio()">Generate Portfolio</button>
+  </div>
+
+  <!-- Load jsPDF UMD build from CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="2script.js"></script>
+</body>
+</html>
